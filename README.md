@@ -11,6 +11,7 @@
 4. __Edit database config__: edit in src/main/resources/application.properties
     * spring.jpa.hibernate.ddl-auto=create  --> delete and create new tables 
     * spring.jpa.hibernate.ddl-auto=none --> not change schema
+    * __Remember__ edit *url, username, password*
 5. __Insert data__: Run house.sql
 6. __Run app__: Right click on project -> Run as -> Spring boot app (with success spring tools installation)
 
