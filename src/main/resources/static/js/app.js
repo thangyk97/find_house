@@ -3,6 +3,7 @@ function showResults(housesStr) {
     var htmlStr = "";
     
     houses.forEach(function(house) {
+    	house.score = parseFloat(Math.round(house.score * 100) / 100).toFixed(2);
     	switch (house.bus) {
     	case 0:
     	case 1: 
@@ -49,8 +50,8 @@ function showResults(housesStr) {
                 <table class="table table-sm">
                     <tbody>
                         <tr>
-                            <th>Mã số</th>
-                            <td>${house.id}</td>           
+                            <th>Điểm số</th>
+                            <td>${house.score}</td>           
                         </tr>
                         <tr>
                             <th>Giá</th>

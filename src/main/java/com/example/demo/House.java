@@ -54,14 +54,10 @@ public class House implements Comparable<House> {
 	}
 
 	public void computeDelta(House house) {
-//		this.distance = house.distance - this.distance;
-//		this.acreage  = this.acreage - house.acreage;
-//		this.term     = house.term - this.term;
-//		this.price    = house.price - this.price;
 		
-		this.distance = - this.distance;
-		this.term     = - this.term;
-		this.price    = - this.price;
+//		this.distance = - this.distance;
+//		this.term     = - this.term;
+//		this.price    = - this.price;
 		
 		if (house.getBus() == 0) {
 			this.bus = 0.0;
@@ -114,19 +110,35 @@ public class House implements Comparable<House> {
 	}
 	
 	public void findMax(House house) {
-		if (this.distance < house.distance) this.distance = house.distance;
+//		if (this.distance < house.distance) this.distance = house.distance;
+//		if (this.acreage < house.acreage) this.acreage = house.acreage;
+//		if (this.term < house.term) this.term = house.term;
+//		if (this.price < house.price) this.price = house.price;
+//		if (this.bus < house.bus) this.bus = house.bus;
+//		if (this.isWithHost < house.isWithHost) this.isWithHost = house.isWithHost;
+		
+		//test
+		if (this.distance > house.distance) this.distance = house.distance;
 		if (this.acreage < house.acreage) this.acreage = house.acreage;
-		if (this.term < house.term) this.term = house.term;
-		if (this.price < house.price) this.price = house.price;
+		if (this.term > house.term) this.term = house.term;
+		if (this.price > house.price) this.price = house.price;
 		if (this.bus < house.bus) this.bus = house.bus;
 		if (this.isWithHost < house.isWithHost) this.isWithHost = house.isWithHost;
 	}
 	
 	public void findMin(House house) {
-		if (this.distance > house.distance) this.distance = house.distance;
+//		if (this.distance > house.distance) this.distance = house.distance;
+//		if (this.acreage > house.acreage) this.acreage = house.acreage;
+//		if (this.term > house.term) this.term = house.term;
+//		if (this.price > house.price) this.price = house.price;
+//		if (this.bus > house.bus) this.bus = house.bus;
+//		if (this.isWithHost > house.isWithHost) this.isWithHost = house.isWithHost;
+		
+		//test
+		if (this.distance < house.distance) this.distance = house.distance;
 		if (this.acreage > house.acreage) this.acreage = house.acreage;
-		if (this.term > house.term) this.term = house.term;
-		if (this.price > house.price) this.price = house.price;
+		if (this.term < house.term) this.term = house.term;
+		if (this.price < house.price) this.price = house.price;
 		if (this.bus > house.bus) this.bus = house.bus;
 		if (this.isWithHost > house.isWithHost) this.isWithHost = house.isWithHost;
 	}

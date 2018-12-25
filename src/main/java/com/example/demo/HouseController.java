@@ -47,8 +47,6 @@ public class HouseController {
 		House tempHouse = new House();
 		House maxHouse = new House();
 		House minHouse = new House();
-		House tempMax = new House();
-		House tempMin = new House();
 		
 		// test		
 		removeByThreshold(houses, listHouseTemp, house, weightHouse);
@@ -70,16 +68,6 @@ public class HouseController {
 		for (House house2 : houses) {
 			house2.normalise(tempHouse);;
 		}
-		
-		// Chuẩn hóa max min
-//		for (House house2 : houses) {
-//			tempMax.findMax(house2);
-//			tempMin.findMin(house2);
-//		}
-//		
-//		for (House house2 : houses) {
-//			house2.maxMinNormalization(tempMax, tempMin);
-//		}
 		
 		// Compute v = w * r
 		weightHouse.computePercentOfWeight();
