@@ -50,23 +50,27 @@ function showResults(housesStr) {
                     <tbody>
                         <tr>
                             <th>Mã số</th>
-                            <td>${house.id}</td>                          
+                            <td>${house.id}</td>           
                         </tr>
                         <tr>
                             <th>Giá</th>
                             <td>${house.price}</td>
+                            <td>(VNĐ)</td>
                         </tr>
                         <tr>
                             <th>Khoảng cách</th>
                             <td>${house.distance}</td>
+                            <td>(Km)</td>
                         </tr>
                         <tr>
                             <th>Diện tích</th>
                             <td>${house.acreage}</td>
+                            <td>(m2)</td>
                         </tr>
                         <tr>
-                            <th>Thời hạn hợp đồng</th>
+                            <th>Chu kỳ</th>
                             <td>${house.term}</td>
+                            <td>(tháng)</td>
                         </tr>
                         <tr>
                             <th>Xe bus</th>

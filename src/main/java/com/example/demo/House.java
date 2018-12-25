@@ -43,15 +43,30 @@ public class House implements Comparable<House> {
 		this.bus = 0.0;
 		this.isWithHost = 0.0;
 	}
+	
+	public void maxMinNormalization(House tempMax, House tempMin) {
+		this.distance = (this.distance - tempMin.distance) / (tempMax.distance - tempMin.distance);
+		this.acreage = (this.acreage - tempMin.acreage) / (tempMax.acreage - tempMin.acreage);
+		this.term = (this.term - tempMin.term) / (tempMax.term - tempMin.term);
+		this.price = (this.price - tempMin.price) / (tempMax.price - tempMin.price);
+		this.bus = (this.bus - tempMin.bus) / (tempMax.bus - tempMin.bus);
+		this.isWithHost = (this.isWithHost - tempMin.isWithHost) / (tempMax.isWithHost - tempMin.isWithHost);
+	}
 
 	public void computeDelta(House house) {
-		this.distance = house.distance - this.distance;
-		this.acreage  = house.acreage;
-		this.term     = house.term - this.term;
-		this.price    = house.price - this.price;
+//		this.distance = house.distance - this.distance;
+//		this.acreage  = this.acreage - house.acreage;
+//		this.term     = house.term - this.term;
+//		this.price    = house.price - this.price;
+		
+		this.distance = - this.distance;
+		this.term     = - this.term;
+		this.price    = - this.price;
+		
 		if (house.getBus() == 0) {
 			this.bus = 0.0;
 		}
+		
 		if (this.isWithHost == house.isWithHost) {
 			this.isWithHost = 1.0;
 		} else {
